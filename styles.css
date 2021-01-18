@@ -1,0 +1,193 @@
+/*I've grouped the different CSS statements and places them together.
+Importing the two different fonts used throughout the page:*/
+.music{
+    display: none;
+}
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 100px;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+@font-face {
+    font-family: coolvetica;
+    src: url(assets/coolvetica.ttf);
+}
+@font-face {
+    font-family: LGcafe;
+    src: url(assets/LouisGeorgeCafe.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-image: url("bg.gif");
+    background-size: : cover;
+    background-position: center;
+    background-repeat: repeat;
+    font-family: https://fonts.google.com/specimen/IBM+Plex+Sans?query=IBM#pairings;
+}
+
+.Guidelines{
+    text-align: left;
+}
+/*Feedback messages to the user:*/
+p.errorMess {
+    color: #ED2939;
+}
+p.successMess {
+    color: #03C04A;
+}
+p.Welcome{
+    color: #14171A;
+    font-size: 19.5px;
+}
+/*-------------------*/
+
+
+/*The navigation/header included in all pages:*/
+header, footer {
+    max-width: 100%;
+}
+
+footer a:hover {
+  color: yellow;
+}
+
+nav {
+    background-color: #1DA1F2;
+    padding: 6px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+nav ul {
+    margin: 0px;
+    padding: 15px;
+    list-style-type: none;
+}
+li {
+    display: inline-block;
+}
+li a {
+    display: block;
+    padding-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.signInOut {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+    color: white;
+}
+/*----------------------------------------*/
+
+
+/*The mainbox is the "outline" for all pages*/
+.mainbox {
+    background-color: white;
+    max-width: 70%;
+    max-height: 70%;
+    margin: 50px auto;
+    padding: 50px;
+    text-align: center;      
+    border-radius: 20px;
+}
+h1 {
+    font-family: coolvetica, Helvetica, sans-serif;
+    font-size: 40px;
+    margin: 10px;
+}
+.intro { /*The h1 and welcome text*/
+    text-align: center;
+}
+.displaycontents {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+article { /*For showing the topics and entries*/
+    background-color: #AAB8C2;
+    border-top: 1px solid black;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+}
+h3 a {
+    color: White;
+    text-decoration: none;
+}
+/*------------------------------------------------*/
+
+
+/*Etc around the pages:*/
+input[name="nametopic"] {
+    width: 300px;
+}
+input[name="deleteEntry"], input[name="deleteTopic"], input[name="deleteUser"] {
+    background-color: firebrick;
+    color: white;
+    padding: 10px;
+    border:none;
+}
+input {
+    padding: 10px;
+    background:white;
+    border-style: solid;
+    border-color: black;
+    color: #1DA1F2;
+    font-weight: 900;
+    font-family: LGcafe;
+    border-radius: 5px;
+}
+
+textarea{
+    background:white;
+    border-style: solid;
+    border-color: black;
+    color: #1DA1F2;
+    font-weight: 900;
+    font-family: LGcafe;
+    border-radius: 5px;
+    border-width: 2px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.music{
+    display: none;
+}
